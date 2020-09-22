@@ -1,6 +1,0 @@
-framework module ACSnippet {
-  umbrella header "ACSnippet-umbrella.h"
-
-  export *
-  module * { export * }
-}
