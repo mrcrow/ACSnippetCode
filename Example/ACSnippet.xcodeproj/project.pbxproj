@@ -58,14 +58,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		635F75B2ADD1C56286BD61C2 /* ACSnippet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ACSnippet.podspec; path = ../ACSnippet.podspec; sourceTree = "<group>"; };
+		635F75B2ADD1C56286BD61C2 /* ACSnippet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACSnippet.podspec; path = ../ACSnippet.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6DA30E87B0EF4BE472778E7D /* Pods-ACSnippet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACSnippet_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ACSnippet_Tests/Pods-ACSnippet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D2DA02D62D057C2156FC9A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8D2DA02D62D057C2156FC9A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C3FEEFFB496F2B277ED6F9D2 /* Pods-ACSnippet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACSnippet_Example.debug.xcconfig"; path = "Target Support Files/Pods-ACSnippet_Example/Pods-ACSnippet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D253D1BEA95DFD851F5AE727 /* Pods_ACSnippet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACSnippet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3C039BF97DF184E582E0A79 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D3C039BF97DF184E582E0A79 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FF0DB38CCC75C95FA701E366 /* Pods_ACSnippet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACSnippet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				6DA30E87B0EF4BE472778E7D /* Pods-ACSnippet_Tests.debug.xcconfig */,
 				4CE6EDAB29E373D48A681A76 /* Pods-ACSnippet_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = mrcrow;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = LC5K78Z623;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,10 +307,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ACSnippet_Example/Pods-ACSnippet_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACSnippet/ACSnippet.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACSnippet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,6 +520,7 @@
 			baseConfigurationReference = C3FEEFFB496F2B277ED6F9D2 /* Pods-ACSnippet_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LC5K78Z623;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACSnippet/ACSnippet-Prefix.pch";
 				INFOPLIST_FILE = "ACSnippet/ACSnippet-Info.plist";
@@ -529,6 +537,7 @@
 			baseConfigurationReference = 57B29E5C5F078EF3E9F3F5F4 /* Pods-ACSnippet_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LC5K78Z623;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACSnippet/ACSnippet-Prefix.pch";
 				INFOPLIST_FILE = "ACSnippet/ACSnippet-Info.plist";
