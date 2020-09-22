@@ -7,6 +7,7 @@
 //
 
 #import "ACViewController.h"
+#import <ACSnippet/ACTileManager.h>
 
 @interface ACViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    ACTileManager *manager = [ACTileManager sharedManager];
+    NSString *tileCode = [manager tileCodeWithZoom:19 atCoordinate:CLLocationCoordinate2DMake(39.893585, 116.452766)];
+    NSLog(@"%@", tileCode);
 }
 
 - (void)didReceiveMemoryWarning
