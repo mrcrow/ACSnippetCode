@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'ACSnippet_Example' do
+  pod 'ACSnippet', :path => '../'
+
+  target 'ACSnippet_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
